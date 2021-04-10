@@ -13,7 +13,7 @@ class Solution:
         while temp and temp.next:
             temp = temp.next.next
             head = head.next
-        return head
+        return head #  when the tmp reaches the end of the list, the head just reaches the half of it, which is exactly what we want.
             
         # fast = head
         # slow = head
@@ -21,3 +21,4 @@ class Solution:
         #     fast = fast.next.next
         #     slow = slow.next
         # return slow
+        
