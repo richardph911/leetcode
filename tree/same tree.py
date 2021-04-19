@@ -10,12 +10,15 @@ class Solution:
             return True
         if not q or not p:
             return False
-        if p.val != q.val:
-            return False
-        return self.isSameTree(p.right, q.right) and self.isSameTree(p.left, q.left)
+        return p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
     
+# If one of them do not exist and another exist, we return False.
+# If two of them are equal to None, we return True.
+# If none of two above condition holds, we look at children and return True only if values of nodes are equal and if True holds for left and right subtrees.
+
 # class Solution:
     # def isSameTree(self, p, q):
     #     if p and not q or q and not p: return False
     #     if not p and not q: return True
     #     return p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        
