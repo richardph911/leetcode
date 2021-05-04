@@ -1,3 +1,4 @@
+# we just push onto stack and pop if closing is next. at the end if empty then valid true
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
@@ -15,3 +16,6 @@ class Solution:
         if len(stack) == 0:
             return True
         return False
+        
+        
+        
