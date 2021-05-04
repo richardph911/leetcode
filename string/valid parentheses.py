@@ -1,4 +1,18 @@
 # we just push onto stack and pop if closing is next. at the end if empty then valid true
+
+
+        class Solution:
+    def isValid(self, s):
+        stack = [0]
+        mapping = {0: None, '(':')', '[':']', '{':'}'}
+        for c in s:
+            if c in mapping:
+                stack.append(c)
+            else:
+                if mapping[stack.pop()] != c: return False
+        return stack == [0]
+        
+        
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
@@ -18,4 +32,4 @@ class Solution:
         return False
         
         
-        
+      
