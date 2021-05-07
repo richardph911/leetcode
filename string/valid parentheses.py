@@ -12,7 +12,7 @@
                 if mapping[stack.pop()] != c: return False
         return stack == [0]
         
-        
+    # check all cases    
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
