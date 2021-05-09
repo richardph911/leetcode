@@ -1,3 +1,7 @@
+# ....left root right....
+# root in the middle
+# everytime; recursive left and right
+
 class Solution:
     def sortedListToBST(self, head: ListNode) -> TreeNode:
         def dfs(head, tail):
