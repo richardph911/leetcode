@@ -12,3 +12,20 @@ class Solution:
                 ch = ch[ch.index(i) + 1:] + i
             count = max(count, len(ch))
         return count
+    # class Solution:
+    # def lengthOfLongestSubstring(self, s: str) -> int:
+    #     seen = {}
+    #     left = 0
+    #     output = 0
+    #     # a b c d a b
+    #     # 0 1 2 3 x
+    #     # output = max(output, right - left + 1)
+    #     for current_index, val in enumerate(s):
+    #         if val in seen:
+    #             # then need to move the left pointer
+    #             left = max(left, seen[val] +1)
+    #         #not seen
+    #         output = max(output, current_index - left + 1)
+    #         seen[val] = current_index
+    #     return output
+                
